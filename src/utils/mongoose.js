@@ -4,7 +4,7 @@ const conn = {
     isConnected: false
 }
 
-export default async function connectDB() {
+export async function connectDB() {
 
     if(conn.isConnected) return;
 
