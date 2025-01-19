@@ -15,6 +15,10 @@ const spotifySchema = new Schema({
         type: String,
         required: true
     },
+    img: {
+        type: String,
+        required: true
+    },
 });
 
 export default models.spotifies || model("spotifies", spotifySchema);
