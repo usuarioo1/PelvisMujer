@@ -1,5 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { connectDB } from "@/utils/mongoose";
+import Spotify from '@/models/spotifySchema'
+
+async function loadpodcastData() {
+    connectDB();
+    const podcastData = await Spotify.find()
+    return podcastData;
+
+}
 
 interface Podcast {
     id: string;
@@ -47,7 +56,9 @@ const podcastData: Podcast[] = [
     }
 ];
 
-export default function CleanPodcastList() {
+export default async function CleanPodcastList() {
+
+    const podcasts = await loadpodcastData();
     return (
         <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
@@ -55,12 +66,12 @@ export default function CleanPodcastList() {
                     Podcasts sobre el Rol de la Mujer
                 </h2>
                 <ul className="space-y-6">
-                    {podcastData.map((podcast) => (
-                        <li key={podcast.id} className="border-b border-gray-200 pb-6 last:border-b-0">
+                    {podcasts.map((podcast) => (
+                        <li key={podcast._id} className="border-b border-gray-200 pb-6 last:border-b-0">
                             <div className="flex items-center">
                                 <div className="flex-shrink-0">
                                     <Image
-                                        src={podcast.imageUrl || "/placeholder.svg"}
+                                        src={podcast.img || "/placeholder.svg"}
                                         alt={podcast.title}
                                         width={80}
                                         height={80}
@@ -72,7 +83,7 @@ export default function CleanPodcastList() {
                                     <p className="mt-1 text-sm text-gray-500">{podcast.description}</p>
                                     <div className="mt-2">
                                         <Link
-                                            href={podcast.spotifyUrl}
+                                            href={podcast.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-sm font-medium text-green-600 hover:text-green-500"
