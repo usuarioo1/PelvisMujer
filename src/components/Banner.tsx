@@ -4,7 +4,7 @@ export default function Banner() {
     return (
         <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px]">
             <Image
-                src="/placeholder.svg?height=600&width=1200"
+                src="https://www.yosemite.com/wp-content/uploads/2023/04/Yosemite-Valley-1024x683.webp"
                 alt="Banner descriptivo del sitio"
                 layout="fill"
                 objectFit="cover"
