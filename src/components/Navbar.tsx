@@ -18,11 +18,11 @@ export default function Navbar() {
                             </Link>
                         </div>
                         <div className="hidden md:flex items-center space-x-1">
-                            <Link href="/" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Inicio</Link>
-                            <Link href="/conoceme" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Conóceme</Link>
+                            <Link href="/" className="py-4 px-2 text-gray-500  hover:text-green-500 transition duration-300">Inicio</Link>
+                            <Link href="/conoceme" className="py-4 px-2 text-gray-500  hover:text-green-500 transition duration-300">Conóceme</Link>
                             <div className="relative group">
                                 <button
-                                    className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                                    className="py-4 px-2 text-gray-500  hover:text-green-500 transition duration-300"
                                     onClick={() => setIsSubmenuOpen(!isSubmenuOpen)} 
                                 >
                                     Plataforma de autocuidado
@@ -37,9 +37,9 @@ export default function Navbar() {
                                     </div>
                                 )}
                             </div>
-                            <Link href="/podcast" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Podcast</Link>
-                            <Link href="/eventos" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Eventos</Link>
-                            <Link href="/blog" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Blog</Link>
+                            <Link href="/podcast" className="py-4 px-2 text-gray-500  hover:text-green-500 transition duration-300">Podcast</Link>
+                            <Link href="/eventos" className="py-4 px-2 text-gray-500  hover:text-green-500 transition duration-300">Eventos</Link>
+                            <Link href="/blog" className="py-4 px-2 text-gray-500  hover:text-green-500 transition duration-300">Blog</Link>
                         </div>
                     </div>
                     <div className="md:hidden flex items-center">
