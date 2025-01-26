@@ -1,3 +1,4 @@
+
 export default function Conoceme() {
     return (
         <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
@@ -13,6 +14,7 @@ export default function Conoceme() {
                     </div>
                     <div className="w-full lg:w-2/3 lg:pl-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Conóceme</h2>
+
                         <p className="text-lg text-gray-700 mb-6">
                             Como terapeuta especializada en asistencia al parto y psicología Gestalt, mi enfoque se centra en proporcionar un apoyo integral durante uno de los momentos más transformadores de la vida. Combino técnicas de respiración y relajación con principios de la psicología Gestalt para ayudar a las madres a conectar profundamente con su experiencia presente, facilitando un parto más consciente y empoderado.
                         </p>
@@ -41,6 +43,7 @@ export default function Conoceme() {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }
